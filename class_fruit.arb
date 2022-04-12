@@ -1,0 +1,13 @@
+class Fruit
+    @@family = 'plant'
+    def self.family
+        return @@family
+    end
+    def initialize(weight)
+        @weight = weight
+    end
+end
+
+
+a = Fruit.new(20)
+puts Fruit.family

@@ -1,0 +1,15 @@
+#!/usr/bin/ruby -w
+
+$cached_ans = []
+$cached_ans[0] = 0
+$cached_ans[1] = 1
+
+def fibon(a)
+    if $cached_ans[a-1] != nil
+        return $cached_ans[a-1]
+    else
+        return fibon(a-1) + fibon(a-2)
+    end
+end
+
+puts fibon(ARGV[0].to_i)
